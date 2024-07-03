@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <vector>
-using namespace std;
 
 
 struct Packet {
@@ -11,5 +10,5 @@ struct Packet {
     uint16_t len;
     std::vector<uint8_t> data;
     uint16_t crc16;
-    string stringData;
+    std::string stringData;
 };
