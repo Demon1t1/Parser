@@ -3,7 +3,6 @@
 #include <vector>
 using namespace std;
 
-
 struct Packet {
     uint16_t head;
     uint8_t type;
@@ -11,5 +10,5 @@ struct Packet {
     uint16_t len;
     std::vector<uint8_t> data;
     uint16_t crc16;
-    string stringData;
+    std::string stringData;
 };

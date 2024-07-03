@@ -8,7 +8,7 @@ Packet parse(std::vector<uint8_t> buffer, Packet packet) {
 
     size_t offset = 0;
 
-    // Чтение head
+    // Read head
     packet.head = buffer[offset] | (buffer[offset + 1] << 8);
     offset += 2;
     std::cout << "Head: " << std::hex << packet.head << std::endl;
@@ -16,22 +16,22 @@ Packet parse(std::vector<uint8_t> buffer, Packet packet) {
         throw std::runtime_error("Invalid head");
     }
 
-    // Чтение type
+    // Read type
     packet.type = buffer[offset];
     offset += 1;
     std::cout << "Type: " << std::hex << static_cast<int>(packet.type) << std::endl;
 
-    // Чтение seq
+    // Read seq
     packet.seq = buffer[offset] | (buffer[offset + 1] << 8);
     offset += 2;
     std::cout << "Seq: " << std::hex << packet.seq << std::endl;
 
-    // Чтение len
+    // Read len
     packet.len = buffer[offset] | (buffer[offset + 1] << 8);
     offset += 2;
     std::cout << "Len: " << std::hex << packet.len << std::endl;
 
-    // Чтение data
+    // Read data
     packet.data.resize(packet.len);
     char dataChar[sizeof(packet.data)];
     memcpy(dataChar, &buffer[offset], packet.len);
