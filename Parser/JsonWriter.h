@@ -4,7 +4,6 @@
 #include <fstream>
 #include <sstream>
 #include "Parser.h"
-using namespace std;
 using json = nlohmann::json;
 
 void JSONWrite(Packet packet) {
