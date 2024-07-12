@@ -41,5 +41,6 @@ Packet parse(std::vector<uint8_t> buffer, Packet packet) {
         std::cout << dataChar[i];
         packet.stringData += dataChar[i];
     }
+    std::cout << "" << std::endl;
     return packet;
 }

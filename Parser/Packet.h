@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 
+
 struct Packet {
     uint16_t head;
     uint8_t type;

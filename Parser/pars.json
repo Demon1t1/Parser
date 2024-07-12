@@ -1,7 +1,9 @@
 {
-  "Data": "Hello",
-  "Head": "2424",
-  "Len": 5,
-  "Seq": 1,
-  "Type": 1
+    "Packet": {
+        "Head": "2424",
+        "Type": 1,
+        "Seq": 1,
+        "Len": 5,
+        "Data": "Hello"
+    }
 }
