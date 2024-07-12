@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JsonWriter.h" />
+    <ClInclude Include="Log.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="Parser.h" />
   </ItemGroup>

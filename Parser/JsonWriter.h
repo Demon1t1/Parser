@@ -21,7 +21,7 @@ void JSONWrite(Packet packet) {
 
     // Adding data to a JSON document
     rapidjson::Value packetJSON(rapidjson::kObjectType);
-    packetJSON.AddMember("Head", rapidjson::Value().SetString(hexHead.c_str(), allocator), allocator);
+    packetJSON.AddMember("Head", rapidjson::Value().SetString(hexHead.c_str(), allocator), allocator);  
     packetJSON.AddMember("Type", packet.type, allocator);
     packetJSON.AddMember("Seq", packet.seq, allocator);
     packetJSON.AddMember("Len", packet.len, allocator);
